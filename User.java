@@ -14,10 +14,34 @@ class Task {
 }
 public class User {
     String name;
-    String email;
     String password;
     String role;
     String status;
+
+
+    public User() {
+    }
+
+    // constructor
+    public User(String name, String password, String role, String status)  {
+        this.name = name;
+        this.password = password;
+        this.role = role;
+        this.status = status;
+    }
+    
+
+  
+    public String getName() {return name;}  
+    public void setName(String name) {this.name = name;}
+    public String getPassword() {return password;}
+    public void setPassword(String password) {this.password = password;}
+    public String getRole() {return role;}
+    public void setRole(String role) {this.role = role;}
+    public String getStatus() {return status;}
+
+
+
 
     // constructor, getters, and setters
 }
@@ -84,7 +108,7 @@ public Task findTaskByTitle(String title) {
                     String description = scanner.next();
                     System.out.print("Enter the due date of the task: ");
                     String dueDate = scanner.next();
-                    System.out.print("Enter the Your name for the task: ");
+                    System.out.print("Enter Your name for the task: ");
                     String name = scanner.next();
 
 
@@ -101,7 +125,7 @@ public Task findTaskByTitle(String title) {
 
                     toDoList.addTask(task);
                     
-                    System.out.println("Task added successfully from ( "+user.name+" )");
+                    System.out.println("Task dded successfully from ( "+user.name+" )");
                     break;
                 case 2:
                 // code to remove a task
@@ -140,6 +164,7 @@ public Task findTaskByTitle(String title) {
                     System.out.println("Description: " + t.description);
                     System.out.println("Due date: " + t.dueDate);
                     System.out.println("Status: " + (t.status ? "Complete" : "Incomplete"));
+                    System.out.println("Assigned to: " + t.assignedUser.name);
                     System.out.println();
                 }
                 break;
