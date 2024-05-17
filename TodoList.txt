@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+import java.util.List;
+
+class Task {
+    String title;
+    String description;
+    boolean status;
+    String dueDate;
+
+    // constructor, getters, and setters
+}
+
+class ToDoList {
+    List<Task> tasks = new ArrayList<>();
+
+    void addTask(Task task) {
+        tasks.add(task);
+    }
+
+    void removeTask(Task task) {
+        tasks.remove(task);
+    }
+
+    void markTaskAsComplete(Task task) {
+        task.status = true;
+    }
+
+    List<Task> listAllTasks() {
+        return tasks;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // create an instance of ToDoList
+        // display a menu to the user
+        // based on the user's choice, perform the appropriate action
+    }
+}
